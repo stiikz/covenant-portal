@@ -1,0 +1,221 @@
+<?php
+//switch($_POST['dropdown']) { case '1': echo "Here is your unofficial transcript"; break; case '2': echo "Your request for an official transcript has been received"; break; default: echo "You need to select something"; }
+
+
+ 
+
+
+
+
+ ?>
+
+  (isset($_POST["company"])) ? $company = $_POST["company"] : $company=1;
+<form>
+<select id="company" name="company">
+<option <?php if ($company == 1 ){ echo 'selected' ; }  ?> value="1">Apple</option>
+<option <?php if ($company == 2 ){ echo 'selected' ; }  ?> value="2">Samsung</option>
+<option <?php if ($company == 3 ){ echo 'selected' ; } ?> value="3">HTC</option>
+</select>
+</form>
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'
+  src='http://code.jquery.com/jquery-1.9.1.js'></script>
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+<script type='text/javascript'
+  src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){<!--   w  w w .  j a v  a  2s  .  c  om-->
+$(document).ready(function () {
+    $("#btn-id").button();
+    $("#btn-id").click(function () {
+        $(this).button('loading');
+        setTimeout(function () {
+            $("#btn-id").button('reset').addClass("btn-success");
+        }, 2000);
+    });
+});
+});//]]>  
+</script>
+</head>
+<body>
+  <p>
+    <button id="btn-id" class="btn btn-large btn-primary" type="button"
+      data-loading-text="loading stuff...">Click Me</button>
+  </p>
+</body>
+</html>
+
+<!--
+<div id="content">
+    <section class="main">
+        <div class="fleft">
+                <select id="cd-dropdown" class="cd-select">
+<option value="-1" selected>Personal Details</option>
+<option value="1">Change Password</option>
+              </select>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/getData.js"></script>
+-->
+
+ <select id="cd-dropdown" class="cd-select">
+<option value="-1" selected>Personal Details</option>
+<option value="1">Change Password</option>
+              </select>
+              
+              
+              <div id="content">
+    <section class="main">
+        <div class="fleft">
+            <nav>
+                <ul>
+                    <li>Personal Details
+                        <ul class="drop-menu menu-1">
+                            <li>Change Password</li>
+                            <li>Change Password</li>
+                            <li>Change Password</li>
+                            <li>Change Password</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/getData.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    
+    text-align: center;
+    
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #f4f4f4;
+    border-radius: 0px;
+    
+}
+nav > ul > li {
+    float: left;
+    width: 300px;
+    height: 60px;
+    line-height: 65px;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+    
+}
+
+nav > ul > li:hover {
+    background: #f4f4f4;
+    border-radius: 0px;
+}
+
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop-menu li {
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-weight: 700;
+  color: rgb(153, 153, 153);
+}
+
+ul.drop-menu li:hover {
+  background: #884488;
+  color: white;
+}
+
+ul.drop-menu li:last-child {
+  border-radius: 0px 0px 0px 0px;
+}
+
+ul.drop-menu li {
+  display: none;
+}
+
+li:hover > ul.drop-menu li {
+  display: block;
+}
+
+<l#i class="default open">
+			<div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Javascript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Frameworks javascript</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Tablets</a></li>
+				<li><a href="#">Dispositivos mobiles</a></li>
+				<li><a href="#">Medios de escritorio</a></li>
+				<li><a href="#">Otros dispositivos</a></li>
+			</ul>
+		</li>
+		<li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Google</a></li>
+				<li><a href="#">Bing</a></li>
+				<li><a href="#">Yahoo</a></li>
+				<li><a href="#">Otros buscadores</a></li>
+			</ul>
+		</li>
+
+ $(document).ready(function () {
+     $('.cd-dropdown').change(function () {
+         var dropval = $(this).val();
+         $.ajax({
+             type: "POST",
+             url: 'pay_fees.php',
+             data: {
+                 dropdown: dropval
+
+             },
+             dataType: 'html'
+
+         }).done(function (data) {
+             $('#page1').html(data);
+         });
+
+     });
+ });
